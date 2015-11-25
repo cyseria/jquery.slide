@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo2</title>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/slider2.js"></script>	
+<style>
+	/* 图片轮播 div 框 */
+	.imageSlider {
+	    position: relative;
+	    width: 650px;
+		height: 430px;
+		overflow: hidden;
+	}
+
+	/* 图片 */
+	.imageBox {
+	    position: absolute;
+	    height: 330px;
+	    top: 0px;
+	    left: 0px;
+	    overflow: hidden;
+	}
+	.imageBox img {
+	    display: block;
+	    float: left;
+		height: 330px;
+	    width: 650px;
+	}
+
+
+	/* 图标 */
+	.icoBox {
+	    position: absolute;
+	    left: 0;
+	    bottom: 14px;
+	    width: 650px;
+	    height: 56px;
+	    text-align: center;
+	    line-height: 40px;
+	    z-index: 10;
+	}
+	.imageSlider .icoSlider-arrow {
+		position: absolute;
+		bottom: 11px;
+		width: 17px;
+		height: 58px;
+		line-height: 58px;
+		text-align: center;
+		color: #fff;
+		background-color: rgba(0,0,0,0.7);
+		font-size: 18px;
+		text-decoration: none;
+		transition: background-color .5s;
+		z-index: 10;
+	}
+	.imageSlider .icoSlider-arrow:hover {
+		background-color: rgba(0,0,0,0.8);
+	}
+	.imageSlider .right {
+		right: 0;
+	}
+	.icoBox span {
+	    display: block;
+	    float: left;
+	    width: 100px;
+		height: 56px;
+	    margin-left: 5px;
+		background-color: #fff;
+	    cursor: pointer;
+		overflow: hidden;
+		border: 2px solid #ccc; 
+	}
+	.icoBox span.active {
+		cursor: default;
+	    border: 2px solid #ff6900; 
+	}
+	.icoBox span>img {
+	    width: 100px;
+	    height: 100px;
+	}
+
+	.icoSlider-arrow>i {
+		font-variant: normal;
+		font-style: normal;
+	}
+</style>
+</head>
+<body>
+	<div class="view-gallery">
+		<h3>相册</h3>
+		<div class="imageSlider">
+			<div class="imageBox">
+				<a href="" target="_blank"><img src="images/1.jpg" /></a>
+				<a href="" target="_blank"><img src="images/2.jpg" /></a>
+				<a href="" target="_blank"><img src="images/3.jpg" /></a>
+				<a href="" target="_blank"><img src="images/4.jpg" /></a>
+				<a href="" target="_blank"><img src="images/1.jpg" /></a>
+				<a href="" target="_blank"><img src="images/2.jpg" /></a>
+				<a href="" target="_blank"><img src="images/3.jpg" /></a>
+				<a href="" target="_blank"><img src="images/4.jpg" /></a>
+				<a href="" target="_blank"><img src="images/1.jpg" /></a>
+				<a href="" target="_blank"><img src="images/2.jpg" /></a>
+				<a href="" target="_blank"><img src="images/3.jpg" /></a>
+				<a href="" target="_blank"><img src="images/4.jpg" /></a>
+			</div>
+			
+			<div class="icoBox">
+					
+				<span class="active" rel="1"><img src="images/1.jpg" /></span>
+				<span rel="2"><img src="images/2.jpg" /></span>
+				<span rel="3"><img src="images/3.jpg" /></span>
+				<span rel="4"><img src="images/4.jpg" /></span>
+				<span rel="5"><img src="images/1.jpg" /></span>
+				<span rel="6"><img src="images/2.jpg" /></span>
+				<span rel="7"><img src="images/3.jpg" /></span>
+				<span rel="8"><img src="images/4.jpg" /></span>
+				<span rel="9"><img src="images/1.jpg" /></span>
+				<span rel="10"><img src="images/2.jpg" /></span>
+				<span rel="11"><img src="images/3.jpg" /></span>
+				<span rel="12"><img src="images/4.jpg" /></span>
+			</div>
+			<a href="javascript:void(0)" class="icoSlider-arrow left" name="left-arrow"><i>&lt;</i></a>
+			<a href="javascript:void(0)" class="icoSlider-arrow right" name="right-arrow"><i>&gt;</i></a>
+		</div>
+
+	</div>
+</body>
+</html>
